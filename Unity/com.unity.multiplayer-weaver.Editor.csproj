@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{82811FCA-78A2-ED65-B77C-CE2E64CFF895}</ProjectGuid>
+    <ProjectGuid>{93D0DB2F-F53D-5A17-ACE7-5C0226DA2A0D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>SteamVR_Editor.dll</AssemblyName>
+    <AssemblyName>com.unity.multiplayer-weaver.Editor.dll</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -247,29 +247,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Mono.Cecil">
+      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll</HintPath>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Advertisements">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.8f1\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll</HintPath>
@@ -300,21 +288,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{BD231772-1CCA-A142-B2A7-FFDEBC0B66EE}</Project>
-      <Name>SteamVR</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Settings.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_SkyboxEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UnitySettingsWindow.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Update.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UpdateModeEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\Helpers.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\MessageClassProcessor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\MonoBehaviourProcessor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\Program.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\SyncListStructProcessor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\UNetBehaviourProcessor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\Weaver\UNetWeaver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />

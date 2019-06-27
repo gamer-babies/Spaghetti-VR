@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{82811FCA-78A2-ED65-B77C-CE2E64CFF895}</ProjectGuid>
+    <ProjectGuid>{5FCD587C-B023-5664-12C3-B6D9F281A654}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>SteamVR_Editor.dll</AssemblyName>
+    <AssemblyName>com.unity.multiplayer-hlapi.Editor.dll</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -300,21 +300,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="SteamVR.csproj">
-      <Project>{BD231772-1CCA-A142-B2A7-FFDEBC0B66EE}</Project>
-      <Name>SteamVR</Name>
+    <ProjectReference Include="com.unity.multiplayer-hlapi.Runtime.csproj">
+      <Project>{FA5CA632-7858-B348-2678-3563F1DAD317}</Project>
+      <Name>com.unity.multiplayer-hlapi.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.multiplayer-weaver.Editor.csproj">
+      <Project>{93D0DB2F-F53D-5A17-ACE7-5C0226DA2A0D}</Project>
+      <Name>com.unity.multiplayer-weaver.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Settings.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_SkyboxEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UnitySettingsWindow.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Update.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UpdateModeEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkAnimatorEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkBehaviourInspector.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkDiscoveryEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkIdentityEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkInformationPreview.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkLobbyManagerEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkManagerEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkManagerHUDEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkManagerPreview.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkMigrationManagerEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkScenePostProcess.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkTransformChildEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkTransformEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkTransformPreview.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\NetworkTransformVisualizerEditor.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Properties\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\MiniJSON.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\Tools\TextUtility.cs" />
+    <Compile Include="Packages\com.unity.multiplayer-hlapi\Editor\WeaverRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
