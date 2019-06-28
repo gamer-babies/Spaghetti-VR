@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.spaghettivr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "G:\\programmering\\Spaghetti VR\\actions.json",
+      "action_manifest_path": "G:\\programmering\\Spaghetti-VR\\Unity\\actions.json",
       "strings": {
         "en_us": {
           "name": "Spaghetti VR [Testing]"
