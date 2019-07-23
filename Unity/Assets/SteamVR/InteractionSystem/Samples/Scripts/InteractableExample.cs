@@ -28,11 +28,14 @@ namespace Valve.VR.InteractionSystem.Sample
 		void Awake()
 		{
 			var textMeshs = GetComponentsInChildren<TextMesh>();
-            generalText = textMeshs[0];
-            hoveringText = textMeshs[1];
+            if (textMeshs.Length >= 2)
+            {
+                generalText = textMeshs[0];
+                hoveringText = textMeshs[1];
 
-            generalText.text = "No Hand Hovering";
-            hoveringText.text = "Hovering: False";
+                generalText.text = "No Hand Hovering";
+                hoveringText.text = "Hovering: False";
+            }
 
             interactable = this.GetComponent<Interactable>();
 		}
@@ -61,6 +64,9 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void HandHoverUpdate( Hand hand )
 		{
+            //this.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0.1f);
+
+            /*
             GrabTypes startingGrabType = hand.GetGrabStarting();
             bool isGrabEnding = hand.IsGrabEnding(this.gameObject);
 
@@ -89,6 +95,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 transform.position = oldPosition;
                 transform.rotation = oldRotation;
             }
+            */
 		}
 
 

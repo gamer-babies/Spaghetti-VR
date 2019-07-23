@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5C307B7E-977A-C9FF-456C-B0880147461A}</ProjectGuid>
+    <ProjectGuid>{CF118143-7E37-744F-BE45-3F55345FEC40}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>SteamVR_Actions.dll</AssemblyName>
+    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -250,26 +250,8 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.VR">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Graphs">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.8f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
       <HintPath>Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Advertisements">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
@@ -279,9 +261,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>G:/programmering/Spaghetti-VR/Unity/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.8f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -639,20 +618,86 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{7C87BE25-0A2E-FC58-1E14-37330F289AA3}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{5C307B7E-977A-C9FF-456C-B0880147461A}</Project>
+      <Name>SteamVR_Actions</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.multiplayer-hlapi.Editor.csproj">
+      <Project>{5FCD587C-B023-5664-12C3-B6D9F281A654}</Project>
+      <Name>com.unity.multiplayer-hlapi.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
+      <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
+      <Name>Unity.PackageManagerUI.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{6940CB9D-2F64-7CD4-BA0F-5610D5AB47B0}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{C12CEEC6-100C-58A2-DE36-314E4DE5E40B}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.multiplayer-weaver.Editor.csproj">
+      <Project>{93D0DB2F-F53D-5A17-ACE7-5C0226DA2A0D}</Project>
+      <Name>com.unity.multiplayer-weaver.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
+      <Project>{8E7C73A3-7719-6FE2-0D0D-A83EDAB504C7}</Project>
+      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
+      <Project>{779568FA-8B74-9FC0-8E1A-6EBB501CEFE6}</Project>
+      <Name>UnityEditor.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
+      <Project>{EDE48CFA-E9C6-66CB-F43E-070EAA2E76B0}</Project>
+      <Name>UnityEngine.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Input_Editor.csproj">
+      <Project>{E6594F2C-2DC5-CB04-5892-01F5D49638B7}</Project>
+      <Name>SteamVR_Input_Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Editor.csproj">
+      <Project>{82811FCA-78A2-ED65-B77C-CE2E64CFF895}</Project>
+      <Name>SteamVR_Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
       <Project>{BD231772-1CCA-A142-B2A7-FFDEBC0B66EE}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
+      <Project>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</Project>
+      <Name>Unity.Analytics.DataPrivacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
+      <Project>{E39D021A-24A3-CC45-6B3B-9304A0479D9A}</Project>
+      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
+      <Project>{58A108A4-18E9-33FA-75FB-B906B95B871B}</Project>
+      <Name>SteamVR_Windows_EditorHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.multiplayer-hlapi.Runtime.csproj">
+      <Project>{FA5CA632-7858-B348-2678-3563F1DAD317}</Project>
+      <Name>com.unity.multiplayer-hlapi.Runtime</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_buggy.cs" />
-    <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_default.cs" />
-    <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_mixedreality.cs" />
-    <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_Pistol.cs" />
-    <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_platformer.cs" />
-    <Compile Include="Assets\SteamVR_Input\SteamVR_Input_Actions.cs" />
-    <Compile Include="Assets\SteamVR_Input\SteamVR_Input_ActionSets.cs" />
-    <Compile Include="Assets\SteamVR_Input\SteamVR_Input_Initialization.cs" />
+    <Compile Include="Assets\Prefabs\Ammunition\PistolShotBehavior.cs" />
+    <Compile Include="Assets\Prefabs\Weapons\Pistol_1\PistolBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
