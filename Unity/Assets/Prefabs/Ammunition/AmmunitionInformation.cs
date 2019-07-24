@@ -4,16 +4,10 @@ using UnityEngine;
 
 namespace Ammunition
 {
-    public class PistolShotBehavior : MonoBehaviour
+    public class AmmunitionInformation : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
         {
 
         }

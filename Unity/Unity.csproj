@@ -696,7 +696,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Prefabs\Ammunition\AmmunitionInformation.cs" />
     <Compile Include="Assets\Prefabs\Ammunition\PistolShotBehavior.cs" />
+    <Compile Include="Assets\Prefabs\Information\Score\ScoreKeeper.cs" />
+    <Compile Include="Assets\Prefabs\Targets\TrainingDoll\TrainingDollBehavior.cs" />
+    <Compile Include="Assets\Prefabs\Targets\TrainingTargetSpawner\TrainingTargetSpawnerBehavior.cs" />
     <Compile Include="Assets\Prefabs\Weapons\Pistol_1\PistolBehavior.cs" />
   </ItemGroup>
   <ItemGroup>

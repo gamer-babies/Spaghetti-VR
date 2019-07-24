@@ -16,13 +16,14 @@ namespace Weapons
         [Tooltip("The flags used to attach this object to the hand.")]
         public Hand.AttachmentFlags attachmentFlags = Hand.AttachmentFlags.ParentToHand | Hand.AttachmentFlags.DetachFromOtherHand | Hand.AttachmentFlags.TurnOnKinematic;
 
-        [Tooltip("The local point which acts as a positional and rotational offset to use while held")]
-        public Transform attachmentOffset;
-
-
+        [Tooltip("The shot prefab used to create shots when firing this weapon")]
         public GameObject shotPrefab;
 
+        [Tooltip("The location where the shot will spawn")]
         public GameObject shotSpawnLocation;
+
+        [Tooltip("The location where the hand will grab this item")]
+        public GameObject grabLocation;
 
         protected new Rigidbody rigidbody;
 
@@ -44,7 +45,7 @@ namespace Weapons
 
             if (startingGrabType != GrabTypes.None)
             {
-                hand.AttachObject(gameObject, startingGrabType, attachmentFlags, attachmentOffset);
+                hand.AttachObject(gameObject, startingGrabType, attachmentFlags, grabLocation.transform);
                 hand.HideGrabHint();
             }
         }
@@ -55,7 +56,7 @@ namespace Weapons
             {
                 var shot = Instantiate(shotPrefab, shotSpawnLocation.transform);
                 shot.transform.parent = null;
-                shot.GetComponent<Rigidbody>().velocity = shotSpawnLocation.transform.TransformDirection(new Vector3(0, 0, 1f));
+                shot.GetComponent<Rigidbody>().velocity = shotSpawnLocation.transform.TransformDirection(new Vector3(0, 0, 50f));
                 //shot.transform.position = shotSpawnLocation.transform.position;
                 //shot.transform.rotation = shotSpawnLocation.transform.rotation;
                 //shot.velocity = shotSpawnLocation.transform.TransformDirection(new Vector3(0, 0, 1f));

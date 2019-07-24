@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Ammunition
+namespace Information
 {
-    public class PistolShotBehavior : MonoBehaviour
+    [RequireComponent(typeof(TextMesh))]
+    public class ScoreKeeper : MonoBehaviour
     {
+        private TextMesh textMesh;
+
         // Start is called before the first frame update
         void Start()
         {
-
+            textMesh = GetComponent<TextMesh>();
         }
 
         // Update is called once per frame

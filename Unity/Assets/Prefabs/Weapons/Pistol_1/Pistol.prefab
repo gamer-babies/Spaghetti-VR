@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 6450389567527826832}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2938021530742807208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7825109442468091394}
+  m_Layer: 0
+  m_Name: GrabLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7825109442468091394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2938021530742807208}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: -0.0009, y: 0.045, z: 0.008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6450389567527826832}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!1 &6450389567527826844
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +94,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5582627041532398374}
+  - {fileID: 7825109442468091394}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -209,6 +240,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   attachmentFlags: 44
-  attachmentOffset: {fileID: 0}
-  shot: {fileID: 1779683617556201616, guid: 734f0c0d08392164b99817c3e6ba3fb2, type: 3}
+  shotPrefab: {fileID: 1779683617556201616, guid: 734f0c0d08392164b99817c3e6ba3fb2,
+    type: 3}
   shotSpawnLocation: {fileID: 2154679529121589897}
+  grabLocation: {fileID: 2938021530742807208}
