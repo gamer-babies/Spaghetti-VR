@@ -699,6 +699,10 @@
     <Compile Include="Assets\Prefabs\Ammunition\AmmunitionInformation.cs" />
     <Compile Include="Assets\Prefabs\Ammunition\PistolShotBehavior.cs" />
     <Compile Include="Assets\Prefabs\Information\Score\ScoreKeeper.cs" />
+    <Compile Include="Assets\Prefabs\MessageSystem\EventInformation.cs" />
+    <Compile Include="Assets\Prefabs\MessageSystem\EventManager.cs" />
+    <Compile Include="Assets\Prefabs\MessageSystem\EventType.cs" />
+    <Compile Include="Assets\Prefabs\MessageSystem\NewBehaviourScript.cs" />
     <Compile Include="Assets\Prefabs\Targets\TrainingDoll\TrainingDollBehavior.cs" />
     <Compile Include="Assets\Prefabs\Targets\TrainingTargetSpawner\TrainingTargetSpawnerBehavior.cs" />
     <Compile Include="Assets\Prefabs\Weapons\Pistol_1\PistolBehavior.cs" />
